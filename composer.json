@@ -1,0 +1,31 @@
+{
+    "name": "jyil/crontab",
+    "description": "crontab extension",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension"],
+    "homepage": "https://github.com/jyil/crontab",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jyiL",
+            "email": "sal597685816@live.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dcat\\Admin\\Crontab\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Dcat\\Admin\\Crontab\\CrontabServiceProvider",
+        "laravel": {
+            "providers": [
+                "Dcat\\Admin\\Crontab\\CrontabServiceProvider"
+            ]
+        }
+    }
+}
