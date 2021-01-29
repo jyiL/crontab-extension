@@ -140,6 +140,8 @@ class AutoTask extends Command
                         if ($process->isSuccessful()) {
                             $status = 1;
                             $request = $process->getOutput();
+                        } else {
+                            $request .= ': ' . $process->getErrorOutput();
                         }
                         $this->saveLog('shell', $value['id'], $value['title'], $status, $request);
                         break;
