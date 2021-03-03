@@ -26,6 +26,7 @@ class CreateCrontabTable extends Migration
             $table->tinyInteger('sleep')->default(0)->comment('延迟秒数执行');
             $table->integer('maximums')->default(0)->comment('最大执行次数 0为不限');
             $table->integer('executes')->default(0)->nullable()->comment('已经执行的次数');
+            $table->integer('timeout')->default(0)->nullable()->comment('超时时间(秒)');
             $table->dateTime('begin_at')->comment('开始时间');
             $table->dateTime('end_at')->comment('结束时间');
             $table->dateTime('execute_at')->nullable()->comment('最后执行时间');
