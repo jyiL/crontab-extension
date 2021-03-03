@@ -97,6 +97,7 @@ class CrontabController extends Controller
         $grid->column('title','任务标题');
         $grid->maximums('最大次数');
         $grid->executes('已执行次数')->sortable();
+        $grid->column('timeout', '超时时间');
         $grid->execute_at('下次预计时间');
         $grid->end_at('最后执行时间')->sortable();
         $grid->status('状态')->sortable()->using(self::CRONTAB_STATUS)->dot([
@@ -165,6 +166,7 @@ class CrontabController extends Controller
         ]);
         $form->number('executes', '已执行次数')->default(0)->help("如果任务执行次数达到上限，则会自动把状态改为“完成”
 如果已“完成”的任务需要再次运行，请重置本参数或者调整最大执行次数并把下面状态值改成“正常”");
+        $form->number('timeout', '超时时间(秒)')->default(0)->help("脚本执行的超时时间, 0-不限制");
         $form->datetime('begin_at', '开始时间')->default(date('Y-m-d H:i:s'))->help("如果设置了开始时间，则从开始时间计算；<br/>如果没有设置开始时间，则以当前时间计算。")->rules('required|date', ['required' => '开始时间不能为空', 'date' => '时间格式不正确']);
         $form->datetime('end_at', '结束时间')->default(date('Y-m-d H:i:s'))->help("如果需要长期执行，请把结束时间设置得尽可能的久")->rules('required|date', ['required' => '结束时间不能为空', 'date' => '时间格式不正确']);
         $form->number('weigh', '权重')->default(100)->help("多个任务同一时间执行时，按照权重从高到底执行")->rules('required|integer', ['required' => '权重不能为空', 'integer' => '权重必须为正整数']);
