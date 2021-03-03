@@ -135,6 +135,8 @@ class AutoTask extends Command
 
                         $process = new Process($cmd);
 
+                        $process->setTimeout($value['timeout'] ?? 0);
+
                         $process->run();
 
                         if ($process->isSuccessful()) {
