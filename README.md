@@ -9,7 +9,7 @@
 ## 安装
 
 ```
-    composer require jyil/crontab-extension
+    composer require jyil/crontab
 ```
 
 ## 配置 crontab
