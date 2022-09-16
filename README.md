@@ -21,4 +21,4 @@
 
 根据以下项目适配dcat admin 2.0
 
-* [dcat-admin-crontab-extension]([dcat-admin-crontab-extension](https://github.com/ArrowJustDoIt/dcat-admin-crontab-extension))
+* [dcat-admin-crontab-extension](https://github.com/ArrowJustDoIt/dcat-admin-crontab-extension)
