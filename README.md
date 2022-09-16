@@ -1,5 +1,8 @@
 # Dcat Admin Extension
 
+[![Latest Stable Version](http://poser.pugx.org/jyil/crontab/v)](https://packagist.org/packages/jyil/crontab)
+[![Total Downloads](http://poser.pugx.org/jyil/crontab/downloads)](https://packagist.org/packages/jyil/crontab)
+[![License](http://poser.pugx.org/jyil/crontab/license)](https://packagist.org/packages/jyil/crontab)
 
 ## 定时任务插件
 
@@ -18,4 +21,4 @@
 
 根据以下项目适配dcat admin 2.0
 
-* [dcat-admin-crontab-extension](dcat-admin-crontab-extension)
+* [dcat-admin-crontab-extension]([dcat-admin-crontab-extension](https://github.com/ArrowJustDoIt/dcat-admin-crontab-extension))
